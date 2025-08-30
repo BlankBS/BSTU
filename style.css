@@ -1,0 +1,539 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E2EBF2;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: #281F32;
+  width: 100%;
+  color: white;
+  text-align: center;
+  border-radius: 0px 0px 15px 15px;
+}
+
+header h1 {
+  margin: 0;
+  padding-top: 30px;
+  font-size: 48px;
+}
+
+header h2 {
+  padding-bottom: 20px;
+}
+
+main .mainInfo, main .studsovet {
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+main .mainInfo h1, main .studsovet h1 {
+  text-align: center;
+  color: #281F32;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+main .mainInfo .grid-container, main .studsovet .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0px 20px 20px 20px;
+}
+
+main .mainInfo .grid-container h2, main .studsovet .grid-container h2 {
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 15px;
+  color: #281F32;
+  font-size: 18px;
+}
+
+main .mainInfo .grid-container div, main .studsovet .grid-container div {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  padding: 25px;
+  border-radius: 12px;
+  min-height: 200px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: fadeInUp 0.6s ease forwards;
+          animation: fadeInUp 0.6s ease forwards;
+}
+
+main .mainInfo .grid-container div img, main .studsovet .grid-container div img {
+  width: 100%;
+  height: 80%;
+}
+
+main .mainInfo .grid-container div[class*="time"] h2::before, main .studsovet .grid-container div[class*="time"] h2::before {
+  content: '⏰ ';
+}
+
+main .mainInfo .grid-container div[class*="internet"] h2::before, main .studsovet .grid-container div[class*="internet"] h2::before {
+  content: '🌐 ';
+}
+
+main .mainInfo .grid-container div[class*="visit"] h2::before, main .studsovet .grid-container div[class*="visit"] h2::before {
+  content: '👥 ';
+}
+
+main .mainInfo .grid-container div[class*="fridge"] h2::before, main .studsovet .grid-container div[class*="fridge"] h2::before {
+  content: '❄️ ';
+}
+
+main .mainInfo .grid-container div[class*="kitchen"] h2::before, main .studsovet .grid-container div[class*="kitchen"] h2::before {
+  content: '🍳 ';
+}
+
+main .mainInfo .grid-container div[class*="iron"] h2::before, main .studsovet .grid-container div[class*="iron"] h2::before {
+  content: '👔 ';
+}
+
+main .mainInfo .grid-container div[class*="wash"] h2::before, main .studsovet .grid-container div[class*="wash"] h2::before {
+  content: '🧼 ';
+}
+
+main .mainInfo .grid-container div[class*="study"] h2::before, main .studsovet .grid-container div[class*="study"] h2::before {
+  content: '📚 ';
+}
+
+main .mainInfo .grid-container div[class*="clean"] h2::before, main .studsovet .grid-container div[class*="clean"] h2::before {
+  content: '🧽 ';
+}
+
+main .mainInfo .grid-container div[class*="contest"] h2::before, main .studsovet .grid-container div[class*="contest"] h2::before {
+  content: '🏆 ';
+}
+
+main .mainInfo .grid-container div[class*="work"] h2::before, main .studsovet .grid-container div[class*="work"] h2::before {
+  content: '🧹 ';
+}
+
+main .mainInfo .grid-container div[class*="duty-floor"] h2::before, main .studsovet .grid-container div[class*="duty-floor"] h2::before {
+  content: '👀 ';
+}
+
+main .mainInfo .grid-container div[class*="duty-lobby"] h2::before, main .studsovet .grid-container div[class*="duty-lobby"] h2::before {
+  content: '📋 ';
+}
+
+main .mainInfo .grid-container div[class*="forbidden"] h2::before, main .studsovet .grid-container div[class*="forbidden"] h2::before {
+  content: '🚫 ';
+}
+
+main .mainInfo .grid-container div:nth-child(1), main .studsovet .grid-container div:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+main .mainInfo .grid-container div:nth-child(2), main .studsovet .grid-container div:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+main .mainInfo .grid-container div:nth-child(3), main .studsovet .grid-container div:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .mainInfo .grid-container div:nth-child(4), main .studsovet .grid-container div:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+main .mainInfo .grid-container div:nth-child(5), main .studsovet .grid-container div:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+main .mainInfo .grid-container div:nth-child(6), main .studsovet .grid-container div:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+main .mainInfo .grid-container div:nth-child(7), main .studsovet .grid-container div:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+main .mainInfo .grid-container div:nth-child(8), main .studsovet .grid-container div:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+main .mainInfo .grid-container div:nth-child(9), main .studsovet .grid-container div:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+main .mainInfo .grid-container div:nth-child(10), main .studsovet .grid-container div:nth-child(10) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+main .mainInfo .grid-container div:nth-child(11), main .studsovet .grid-container div:nth-child(11) {
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
+main .mainInfo .grid-container div:nth-child(12), main .studsovet .grid-container div:nth-child(12) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+main .mainInfo .grid-container div:nth-child(13), main .studsovet .grid-container div:nth-child(13) {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+main .mainInfo .grid-container div:nth-child(14), main .studsovet .grid-container div:nth-child(14) {
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
+}
+
+main .mainInfo .grid-container div:nth-child(15), main .studsovet .grid-container div:nth-child(15) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+main .mainInfo .grid-container div:nth-child(16), main .studsovet .grid-container div:nth-child(16) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+main .mainInfo .grid-container div:nth-child(17), main .studsovet .grid-container div:nth-child(17) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+main .mainInfo .grid-container div:nth-child(18), main .studsovet .grid-container div:nth-child(18) {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+main .mainInfo .grid-container div:nth-child(19), main .studsovet .grid-container div:nth-child(19) {
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+
+main .mainInfo .grid-container div:nth-child(20), main .studsovet .grid-container div:nth-child(20) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+main .mainInfo .grid-container div:hover, main .studsovet .grid-container div:hover {
+  -webkit-transform: translateY(-5px) scale(1.02);
+          transform: translateY(-5px) scale(1.02);
+  -webkit-box-shadow: 0 8px 25px rgba(40, 31, 50, 0.15);
+          box-shadow: 0 8px 25px rgba(40, 31, 50, 0.15);
+  background: linear-gradient(145deg, #f8f9ff, #e8eaff);
+  /* Эффект подсветки */
+}
+
+main .mainInfo .grid-container div:hover::before, main .studsovet .grid-container div:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rgba(40, 31, 50, 0.1)), to(transparent));
+  background: linear-gradient(90deg, transparent, rgba(40, 31, 50, 0.1), transparent);
+  -webkit-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+
+main .mainInfo .grid-container div:hover:hover::before, main .studsovet .grid-container div:hover:hover::before {
+  left: 100%;
+}
+
+main .mainInfo .grid-container .name, main .studsovet .grid-container .name {
+  font-size: 24px;
+}
+
+main .studsovet {
+  text-align: center;
+}
+
+main .studsovet h1 {
+  color: #281F32;
+  padding-top: 20px;
+  font-size: 32px;
+}
+
+/* Анимация появления */
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+  main .mainInfo .grid-container,
+  main .studsovet .grid-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main .mainInfo .grid-container,
+  main .studsovet .grid-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  header h1 {
+    font-size: 36px;
+  }
+  main .mainInfo,
+  main .studsovet {
+    width: 95%;
+    margin: 10px auto;
+  }
+}
+
+/* Дополнительные эффекты */
+.grid-container div {
+  /* Плавное изменение цвета текста */
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.grid-container div:hover {
+  /* Изменение цвета текста при наведении */
+}
+
+.grid-container div:hover h2 {
+  color: #4a3b6b;
+}
+
+.grid-container div:hover p, .grid-container div:hover span {
+  color: #333 !important;
+}
+
+/* Эффект градиентной границы */
+.grid-container div::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(#667eea), to(#764ba2));
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.grid-container div:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+footer {
+  background: linear-gradient(135deg, #281F32 0%, #3a2c4a 100%);
+  color: white;
+  padding: 25px 20px;
+  margin-top: 50px;
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  font-family: 'Inter', sans-serif;
+}
+
+footer a {
+  color: #E2EBF2;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  padding: 0 4px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: inline-block;
+  font-size: 18px;
+}
+
+/* Анимация при наведении */
+footer a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(253, 253, 253, 0.6);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+/* Подчеркивание с анимацией */
+footer a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(#cfcfcf), to(#ffffff));
+  background: linear-gradient(90deg, #ffffff, #cfcfcf, #ffffff);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+}
+
+footer a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+/* Анимация мерцания */
+@-webkit-keyframes linkGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(253, 253, 253, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(253, 253, 253, 0.8);
+  }
+}
+@keyframes linkGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(253, 253, 253, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(253, 253, 253, 0.8);
+  }
+}
+
+/* Анимация пульсации для привлечения внимания */
+footer a {
+  -webkit-animation: linkPulse 6s ease-in-out infinite;
+          animation: linkPulse 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes linkPulse {
+  0%, 90%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  92%, 96% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  94% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+}
+
+@keyframes linkPulse {
+  0%, 90%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  92%, 96% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  94% {
+    -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+  }
+}
+
+/* Дополнительная анимация при наведении */
+footer a:hover {
+  -webkit-animation: none;
+          animation: none;
+  /* Отключаем основную анимацию при наведении */
+  background: linear-gradient(45deg, rgba(253, 253, 253, 0.1), rgba(253, 253, 253, 0.2));
+  border-radius: 4px;
+  padding: 2px 6px;
+  -webkit-box-shadow: 0 4px 12px rgba(253, 253, 253, 0.3);
+          box-shadow: 0 4px 12px rgba(253, 253, 253, 0.3);
+}
+
+/* Анимация для всего футера */
+footer {
+  -webkit-animation: footerSlideUp 0.8s ease-out;
+          animation: footerSlideUp 0.8s ease-out;
+}
+
+@-webkit-keyframes footerSlideUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes footerSlideUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 15px;
+    font-size: 0.95rem;
+  }
+  footer a {
+    font-size: 1.05rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,343 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E2EBF2;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #281F32;
+    width: 100%;
+    color: white;
+    text-align: center;
+    h1{
+        margin: 0;
+        padding-top: 30px;
+        font-size: 48px;
+    }
+    h2{
+        padding-bottom: 20px;
+    }
+
+    border-radius: 0px 0px 15px 15px;
+}
+
+main{
+    .mainInfo, .studsovet{
+        margin: 0 auto;
+        width: 80%;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        h1{
+            text-align: center;
+            color: #281F32;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .grid-container {
+            h2{
+                text-align: center;
+                margin: 0px;
+                padding-bottom: 15px;
+                color: #281F32;
+                font-size: 18px;
+            }
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 0px 20px 20px 20px;
+            div{
+                background-color: #f0f0f0;
+                border-radius: 8px;                
+                background: linear-gradient(145deg, #ffffff, #f0f0f0);
+                padding: 25px;
+                border-radius: 12px;
+                min-height: 200px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+                border: 1px solid #e0e0e0;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 80%;
+                }
+
+                &[class*="time"] h2::before {
+                    content: '⏰ ';
+                }
+                &[class*="internet"] h2::before {
+                    content: '🌐 ';
+                }
+                &[class*="visit"] h2::before {
+                    content: '👥 ';
+                }
+                &[class*="fridge"] h2::before {
+                    content: '❄️ ';
+                }
+                &[class*="kitchen"] h2::before {
+                    content: '🍳 ';
+                }
+                &[class*="iron"] h2::before {
+                    content: '👔 ';
+                }
+                &[class*="wash"] h2::before {
+                    content: '🧼 ';
+                }
+                &[class*="study"] h2::before {
+                    content: '📚 ';
+                }
+                &[class*="clean"] h2::before {
+                    content: '🧽 ';
+                }
+                &[class*="contest"] h2::before {
+                    content: '🏆 ';
+                }
+                &[class*="work"] h2::before {
+                    content: '🧹 ';
+                }
+                &[class*="duty-floor"] h2::before {
+                    content: '👀 ';
+                }
+                &[class*="duty-lobby"] h2::before {
+                    content: '📋 ';
+                }
+                &[class*="forbidden"] h2::before {
+                    content: '🚫 ';
+                }
+
+                opacity: 0;
+                animation: fadeInUp 0.6s ease forwards;
+                
+                @for $i from 1 through 20 {
+                    &:nth-child(#{$i}) {
+                        animation-delay: $i * 0.1s;
+                    }
+                }
+
+                &:hover {
+                    transform: translateY(-5px) scale(1.02);
+                    box-shadow: 0 8px 25px rgba(40, 31, 50, 0.15);
+                    background: linear-gradient(145deg, #f8f9ff, #e8eaff);
+                    
+                    /* Эффект подсветки */
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: -100%;
+                        width: 100%;
+                        height: 100%;
+                        background: linear-gradient(90deg, 
+                            transparent, 
+                            rgba(40, 31, 50, 0.1), 
+                            transparent);
+                        transition: left 0.5s ease;
+                    }
+                    
+                    &:hover::before {
+                        left: 100%;
+                    }
+                }
+
+            }
+            .name{
+                font-size: 24px;
+            }
+        }
+    }
+
+    .studsovet{
+        text-align: center;
+        h1 {
+            color: #281F32;
+            padding-top: 20px;
+            font-size: 32px;
+        }
+    }
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    main .mainInfo .grid-container,
+    main .studsovet .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    main .mainInfo .grid-container,
+    main .studsovet .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        font-size: 36px;
+    }
+    
+    main .mainInfo, 
+    main .studsovet {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+/* Дополнительные эффекты */
+.grid-container div {
+    /* Плавное изменение цвета текста */
+    transition: color 0.3s ease;
+}
+
+.grid-container div:hover {
+    /* Изменение цвета текста при наведении */
+    h2 {
+        color: #4a3b6b;
+    }
+    
+    p, span {
+        color: #333 !important;
+    }
+}
+
+/* Эффект градиентной границы */
+.grid-container div::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.grid-container div:hover::after {
+    transform: scaleX(1);
+}
+
+footer {
+    background: linear-gradient(135deg, #281F32 0%, #3a2c4a 100%);
+    color: white;
+    padding: 25px 20px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+    font-family: 'Inter', sans-serif;
+}
+
+footer a {
+    color: #E2EBF2;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    padding: 0 4px;
+    transition: all 0.4s ease;
+    display: inline-block;
+    font-size: 18px;   
+}
+
+/* Анимация при наведении */
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(253, 253, 253, 0.6);
+    transform: translateY(-2px);
+}
+
+/* Подчеркивание с анимацией */
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background: linear-gradient(90deg, #ffffff, #cfcfcf, #ffffff);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease;
+}
+
+footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Анимация мерцания */
+@keyframes linkGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(253, 253, 253, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(253, 253, 253, 0.8);
+    }
+}
+
+/* Анимация пульсации для привлечения внимания */
+footer a {
+    animation: linkPulse 6s ease-in-out infinite;
+}
+
+@keyframes linkPulse {
+    0%, 90%, 100% {
+        transform: scale(1);
+    }
+    92%, 96% {
+        transform: scale(1.05);
+    }
+    94% {
+        transform: scale(1.08);
+    }
+}
+
+/* Дополнительная анимация при наведении */
+footer a:hover {
+    animation: none; /* Отключаем основную анимацию при наведении */
+    background: linear-gradient(45deg, rgba(253, 253, 253, 0.1), rgba(253, 253, 253, 0.2));
+    border-radius: 4px;
+    padding: 2px 6px;
+    box-shadow: 0 4px 12px rgba(253, 253, 253, 0.3);
+}
+
+/* Анимация для всего футера */
+footer {
+    animation: footerSlideUp 0.8s ease-out;
+}
+
+@keyframes footerSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+    
+    footer a {
+        font-size: 1.05rem;
+    }
+}
