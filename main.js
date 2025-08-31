@@ -248,4 +248,5 @@ function GenerateAllCards()
     container.innerHTML = teamMembers.map(CreateCard).join('');
 }
 
+
 document.addEventListener('DOMContentLoaded', GenerateAllCards);
