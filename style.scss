@@ -108,6 +108,21 @@ main{
                 &[class*="forbidden"] h2::before {
                     content: '🚫 ';
                 }
+                &[class*="admin"] h2::before {
+                    content: '👩 ';
+                }
+                &[class*="help"] h2::before {
+                    content: '🤝 ';
+                }
+                &[class*="bed"] h2::before {
+                    content: '🛏️ ';
+                }
+                &[class*="passport"] h2::before {
+                    content: '🪪 ';
+                }
+                &[class*="ambulance"] h2::before {
+                    content: '🏥 ';
+                }
 
                 opacity: 0;
                 animation: fadeInUp 0.6s ease forwards;

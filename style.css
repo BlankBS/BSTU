@@ -138,6 +138,26 @@ main .mainInfo .grid-container div[class*="forbidden"] h2::before, main .studsov
   content: '🚫 ';
 }
 
+main .mainInfo .grid-container div[class*="admin"] h2::before, main .studsovet .grid-container div[class*="admin"] h2::before {
+  content: '👩 ';
+}
+
+main .mainInfo .grid-container div[class*="help"] h2::before, main .studsovet .grid-container div[class*="help"] h2::before {
+  content: '🤝 ';
+}
+
+main .mainInfo .grid-container div[class*="bed"] h2::before, main .studsovet .grid-container div[class*="bed"] h2::before {
+  content: '🛏️ ';
+}
+
+main .mainInfo .grid-container div[class*="passport"] h2::before, main .studsovet .grid-container div[class*="passport"] h2::before {
+  content: '🪪 ';
+}
+
+main .mainInfo .grid-container div[class*="ambulance"] h2::before, main .studsovet .grid-container div[class*="ambulance"] h2::before {
+  content: '🏥 ';
+}
+
 main .mainInfo .grid-container div:nth-child(1), main .studsovet .grid-container div:nth-child(1) {
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
