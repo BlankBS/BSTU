@@ -26,7 +26,7 @@ const teamMembers = [
     {
         role: "Заместитель начальника оперотряда",
         image: "images/studsovet/замопер.jpg", 
-        name: "Какадзе Анзор",
+        name: "Кокадзе Анзор",
         tg: "https://t.me/anzor211111"
     },
     {
