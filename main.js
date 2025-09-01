@@ -134,7 +134,7 @@ const teamMembers = [
     {
         role: "Заместитель старосты 10 этажа", 
         image: "images/studsovet/зам10.jpg",
-        name: "Отсутствует",
+        name: "Чуклай Софья",
         tg: ""
     },
     {
@@ -147,7 +147,7 @@ const teamMembers = [
         role: "Заместитель старосты 11 этажа", 
         image: "images/studsovet/зам11.jpg",
         name: "Отсутствует",
-        tg: ""
+        tg: "https://t.me/sofee_ch"
     },
     {
         role: "Староста 12 этажа", 
