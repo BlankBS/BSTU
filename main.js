@@ -207,7 +207,7 @@ const teamMembers = [
         role: "Спортивный сектор", 
         image: "images/studsovet/спорт.jpg",
         name: "Алесько Арсений",
-        tg: ""
+        tg: "https://t.me/tripl_A333"
     },
     {
         role: "Организационный сектор", 
