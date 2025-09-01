@@ -210,6 +210,15 @@ main{
         width: 95%;
         margin: 10px auto;
     }
+
+    /* Ensure Telegram link in student council cards is visible on small screens */
+    main .studsovet .grid-container div {
+        overflow: visible;
+    }
+
+    main .studsovet .grid-container div img {
+        height: auto;
+    }
 }
 
 /* Дополнительные эффекты */
