@@ -227,6 +227,12 @@ const teamMembers = [
         name: "Веретило Александр",
         tg: "https://t.me/oxatium"
     },
+    {
+        role: "Трудовой сектор", 
+        image: "images/studsovet/трудМозолевская.jpg",
+        name: "Мозолевская Екатерина",
+        tg: "https://t.me/katewixxxx"
+    },
 ];
 
 function CreateCard(cardData)
